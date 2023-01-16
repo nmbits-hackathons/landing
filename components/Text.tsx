@@ -4,7 +4,7 @@ import styles from '../styles/Text.module.css';
 export interface TextProps {
     variant: "bodySemiboldL" | "bodyM";
     children: string;
-    className?: string;
+    className?: React.ReactNode;
 }
 
 export const Text: React.FC<TextProps> = (props) => {    
