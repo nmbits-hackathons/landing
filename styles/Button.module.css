@@ -4,5 +4,6 @@
     padding: 20px 44px;
     border-width: 0;
     background: var(--primary);
-    color: var(--BG)
+    color: var(--BG);
+    cursor: pointer;
 }
