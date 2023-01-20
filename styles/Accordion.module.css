@@ -1,0 +1,36 @@
+.accordion {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 32px;
+    gap: 20px;
+
+    max-width: 765px;
+
+    background: #FAFBFF;
+    border-radius: 16px;
+}
+
+.accordionTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow {
+    transition-duration: 0.2s;
+    width: 49px;
+    height: 49px;
+    border-radius: 24.5px;
+    background-color: #FEFEFE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.showing {
+    transform: rotate(180deg);
+}
+
+.hidden {
+    transform: rotate(0deg);
+}

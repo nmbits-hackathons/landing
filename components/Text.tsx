@@ -2,9 +2,9 @@ import React from "react";
 import styles from '../styles/Text.module.css';
 
 export interface TextProps {
-    variant: "bodySemiboldL" | "bodyM";
-    children: string;
-    className?: React.ReactNode;
+    variant: "bodySemiboldL" | "bodyM" | "bodySemiboldM" | "bodySemiboldS";
+    children: React.ReactNode;
+    className?: string;
 }
 
 export const Text: React.FC<TextProps> = (props) => {    

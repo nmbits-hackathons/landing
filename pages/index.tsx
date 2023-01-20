@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { Roboto } from '@next/font/google';
 import styles from '../styles/Home.module.css';
 import { Title } from '../components/Title';
 import { Button } from '../components/Button';
@@ -13,8 +12,7 @@ import { NavButtons } from '../components/NavButtons';
 import cardOne from '../static/images/1.png'
 import cardTwo from '../static/images/2.png'
 import { CompaniesSlider } from '../components/CompaniesSlider';
-
-const roboto = Roboto({ weight: ['500'], subsets: ['cyrillic'] })
+import { FAQ } from './blocks/FAQ';
 
 export default function Home() {
   return (
@@ -117,7 +115,7 @@ export default function Home() {
             </div>
           </div>
             <CompaniesSlider />
-            <div className={styles.processes}>
+            <div id="processes" className={styles.processes}>
               <div className={styles.processesTitle}>
                 <Title className={styles.mb32} variant="subtitle3">Прозрачные процессы</Title>
                 <Text className={styles.processesDescription} variant="bodyM">Работаем по договору, обговорив сроки и стоимость необходимых работ. Декомпозируем на подзадачи и проектируем решения от бизнес-логики до интерфейса. Проводим полный цикл разработки и гарантируем поддержку продутка после его сдачи.</Text>
@@ -129,6 +127,7 @@ export default function Home() {
             <div className={styles.technologies}>
               <TechCard />
             </div>
+            <FAQ />
             <Title className={styles.formTitle} variant="subtitle3">Поработаем над вашей задачей?</Title>
             <div id="form" className={styles.formContainer}>
               <div>
