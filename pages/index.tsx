@@ -114,7 +114,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-            <CompaniesSlider />
+          <CompaniesSlider />
             <div id="processes" className={styles.processes}>
               <div className={styles.processesTitle}>
                 <Title className={styles.mb32} variant="subtitle3">Прозрачные процессы</Title>
