@@ -183,14 +183,46 @@
   padding: 56px 0 68px 48px;
 }
 
+
+.formContainer {
+  display: flex;
+  gap: 110px;
+  margin-bottom: 154px;
+}
+
+.form {
+  max-width: 768px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.inputsGroup {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.formTitle {
+  margin-bottom: 58px;
+}
+
 /* Mobile */
 @media (max-width: 700px) {
   .padding {
     padding: 146px 16px 0 16px;
   }
 
+  .inputsGroup {
+    flex-direction: column;
+  }
+
   .techCard {
     padding: 40px 0 40px 14px;
+  }
+
+  .formContainer {
+    flex-direction: column-reverse;
   }
 
   .content {
@@ -472,12 +504,6 @@
   margin-bottom: 28px;
 }
 
-.formContainer {
-  display: flex;
-  gap: 110px;
-  margin-bottom: 154px;
-}
-
 .formContacts {
   
 }
@@ -497,23 +523,6 @@
 
   background: #FFFFFF;
   border-radius: 12px;
-}
-
-.form {
-  max-width: 768px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.inputsGroup {
-  display: flex;
-  gap: 10px;
-  justify-content: space-between;
-}
-
-.formTitle {
-  margin-bottom: 58px;
 }
 
 .checkBox {
