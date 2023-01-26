@@ -1,22 +1,15 @@
 import React from 'react';
 import styles from '../styles/Home.module.css';
+import { handleClickScroll } from '../utils';
 
 export const NavButtons: React.FC = () => {
-
-    const handleClickScroll = (id: string) => () => {
-        const element = document.getElementById(id);
-        if (element) {
-          // 👇 Will scroll smoothly to the top of the next section
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      };
 
     return (
         <div className={styles.navButtons}>
             <div onClick={handleClickScroll('products')} className={styles.navButton}>
                 Услуги
             </div>
-            <div className={styles.navButton}>
+            <div onClick={handleClickScroll('cases')} className={styles.navButton}>
                 Кейсы
             </div>
             <div onClick={handleClickScroll('processes')} className={styles.navButton}>

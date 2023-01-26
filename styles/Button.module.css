@@ -6,4 +6,12 @@
     background: var(--primary);
     color: var(--BG);
     cursor: pointer;
+    font-weight: 510;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.button.white {
+    background: var(--BG);
+    color: var(--dark);
 }

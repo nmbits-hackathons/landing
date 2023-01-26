@@ -143,6 +143,16 @@
   inset: 0;
   padding: 1px;
   border-radius: var(--border-radius);
+  background: -moz-linear-gradient(
+    to bottom right,
+    rgba(var(--tile-start-rgb), 1),
+    rgba(var(--tile-end-rgb), 1)
+  );
+  background: -webkit-linear-gradient(
+    to bottom right,
+    rgba(var(--tile-start-rgb), 1),
+    rgba(var(--tile-end-rgb), 1)
+  );
   background: linear-gradient(
     to bottom right,
     rgba(var(--tile-start-rgb), 1),
@@ -207,8 +217,81 @@
   margin-bottom: 58px;
 }
 
+.cases {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.casesContent {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  max-width: 1440px;
+  align-self: center;
+}
+
+.casesCard, .leadForm, .huobiBots {
+  flex: 0 48%;
+  padding: 48px;
+  background: #FAFBFF;
+  border-radius: 16px;
+  display: flex;
+  gap: 48px;
+  flex-direction: column;
+}
+
+.commandContainer {
+  position: absolute;
+  right: 300px;
+  bottom: -70px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(8px);
+  width: 70%;
+}
+
+.truckContainer {
+  position: absolute;
+  right: 100px;
+  bottom: -70px;
+  z-index: 1;
+}
+
+.commandArrow {
+  position: absolute;
+  top: -150px;
+  left: 30px;
+}
+
+.truckArrow {
+  position: absolute;
+  top: -120px;
+  right: -60px;
+}
+
+
 /* Mobile */
 @media (max-width: 700px) {
+  .casesCard, .leadForm, .huobiBots {
+    flex: 1;
+  }
+
+  .commandArrow, .truckArrow {
+    display: none;
+  }
+
+  .commandContainer {
+    left: 10px;
+  }
+
+  .truckContainer {
+    left: 50px;
+    bottom: 60px;
+  }
+
   .padding {
     padding: 146px 16px 0 16px;
   }
@@ -301,6 +384,8 @@
 }
 
 .headerGradient {
+  overflow: hidden;
+  position: relative;
   background: linear-gradient(114.13deg, rgba(87, 164, 237, 0.2) 1.94%, rgba(255, 255, 255, 0) 100.08%), #FFFFFF;
   height: 972px;
   align-items: center;
@@ -379,6 +464,8 @@
 
 .products {
   margin-bottom: 128px;
+  display: flex;
+  flex-direction: column;
 }
 
 .colorDark {
@@ -402,6 +489,9 @@
   display: flex;
   flex-direction: row;
   gap: 8px;
+  justify-content: center;
+  max-width: 1440px;
+  align-self: center;
 }
 
 .productsCard {
@@ -505,7 +595,9 @@
 }
 
 .formContacts {
-  
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
 }
 
 .contactWithIcon {
@@ -583,4 +675,44 @@
   padding: 0px 16px;
   background: var(--primary-accent);
   border-radius: 29px;
+}
+
+.leadForm {
+  background-color: var(--primary);
+  gap: 40px;
+}
+
+.leadFormTextGroup {
+  flex-direction: column;
+  gap: 8px;
+  display: flex;
+}
+
+.huobiBots {
+  background-color: #2E2E2E;
+}
+
+.color06 {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.bottomGradient {
+  position: absolute;
+  bottom: 0;
+
+  background: -moz-linear-gradient(114.13deg, rgba(255, 255, 255, 0) 1.94%, rgba(158, 202, 243, 0.2) 100.08%), #FFFFFF;
+    border-radius: 32px 32px 0px 0px;
+  background: -webkit-linear-gradient(114.13deg, rgba(255, 255, 255, 0) 1.94%, rgba(158, 202, 243, 0.2) 100.08%), #FFFFFF;
+    border-radius: 32px 32px 0px 0px;
+  background: linear-gradient(114.13deg, rgba(255, 255, 255, 0) 1.94%, rgba(158, 202, 243, 0.2) 100.08%), #FFFFFF;
+    border-radius: 32px 32px 0px 0px;
+    
+  height: 1800px;
+  left: 0;
+  right: 0;
+  z-index: -100;
+}
+
+.mainContainer {
+  position: relative;
 }
