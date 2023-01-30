@@ -10,27 +10,66 @@ import CommandSvg from '../../static/images/command.svg';
 import TruckSvg from '../../static/images/truck.svg';
 import CommandArrowSvg from '../../static/images/arrow-command.svg';
 import TruckArrowSvg from '../../static/images/arrow-truck.svg';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
+import HamburgerSvg from '../../static/hamburger.svg';
+import MailSvg from '../../static/mail.svg';
+import PhoneSvg from '../../static/phone.svg';
 
-export function Header() {
+export function Header({ isOpened, setIsOpened }: any) {
+    const { width } = useWindowDimensions();
+    const isMobile = width <= 768;
+
+    function renderNavbar() {
+
+        if (isMobile) {
+            return (
+                <div className={styles.navBar}>
+                    <div className={styles.rowBetween}>
+                        <div onClick={() => setIsOpened(!isOpened)}>
+                            <HamburgerSvg />
+                        </div>
+                        <div className={styles.rightContent}>
+                            <a href='https://google.com' className={styles.iconRounded}> 
+                                <PhoneSvg />
+                            </a>
+                            <a href='https://google.com' className={styles.iconRounded}> 
+                                <MailSvg />
+                            </a>
+                            <a href='https://google.com' className={styles.iconRounded}> 
+                                <TelegramSvg />
+                            </a>
+                        </div>
+                    </div>
+                <div className={styles.logo}><LogoSvg /></div>
+            </div>
+            );
+        }
+
+        return (
+            <div className={styles.navBar}>
+                <div className={styles.logo}><LogoSvg /></div>
+                <div className={styles.rightContent}>
+                    <NavButtons />
+                    <div className={styles.contacts}>
+                    <div className={styles.contact}>
+                        +7 (912) 123-45-67
+                    </div>
+                    <div className={styles.contact}>
+                        info@nmbits.ru
+                    </div>
+                    <div className={styles.iconRounded}> 
+                        <TelegramSvg />
+                    </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
+
     return (
         <main className={styles.headerGradient}>
-            <div className={styles.navBar}>
-            <div className={styles.logo}><LogoSvg /></div>
-            <div className={styles.rightContent}>
-                <NavButtons />
-                <div className={styles.contacts}>
-                <div className={styles.contact}>
-                    +7 (912) 123-45-67
-                </div>
-                <div className={styles.contact}>
-                    info@nmbits.ru
-                </div>
-                <div className={styles.iconRounded}> 
-                    <TelegramSvg />
-                </div>
-                </div>
-            </div>
-            </div>
+            {renderNavbar()}
             <div className={styles.titleContainer}>
             <Title className={`${styles.titleGradient} ${styles.textCenter}`} variant='title1'>
                 <Typewriter

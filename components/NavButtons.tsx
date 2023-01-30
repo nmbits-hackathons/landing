@@ -2,10 +2,10 @@ import React from 'react';
 import styles from '../styles/Home.module.css';
 import { handleClickScroll } from '../utils';
 
-export const NavButtons: React.FC = () => {
+export const NavButtons: React.FC<{ className?: string }> = (props) => {
 
     return (
-        <div className={styles.navButtons}>
+        <div className={[styles.navButtons, props.className].join(' ')}>
             <div onClick={handleClickScroll('products')} className={styles.navButton}>
                 Услуги
             </div>

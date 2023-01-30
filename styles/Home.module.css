@@ -229,7 +229,7 @@
   gap: 8px;
   flex-wrap: wrap;
   flex-direction: row;
-  max-width: 1440px;
+  max-width: 1080px;
   align-self: center;
 }
 
@@ -272,9 +272,76 @@
   right: -60px;
 }
 
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 60px 80px 0 80px;
+  width: 100%;
+  margin-bottom: 132px;
+}
+
+.rightContent {
+  display: flex;
+  flex-direction: row;
+  gap: 145px;
+}
+
+.rowBetween {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navButtons {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  align-items: center;
+}
+
+.footer {
+  border-top: 1px solid rgba(145, 145, 145, 0.6);
+  padding: 60px;
+  display: flex;
+  justify-content: space-between;
+}
 
 /* Mobile */
 @media (max-width: 700px) {
+  .footer {
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .navBar {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 60px 32px 0 32px;
+    margin-bottom: 40px;
+  }
+
+  .navButtons.header {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 32px 32px 0 32px;
+    flex: 1;
+    background-color: white;
+  }
+
+  .rightContent {
+    gap: 8px;
+  }
+
+
   .casesCard, .leadForm, .huobiBots {
     flex: 1;
   }
@@ -410,28 +477,11 @@
   margin-bottom: 48px;
 }
 
-.navBar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 60px 80px 0 80px;
-  width: 100%;
-  margin-bottom: 132px;
-}
-
 .logo {
   color: var(--dark);
   font-weight: 800;
   font-size: 18px;
   line-height: 32px;
-}
-
-.navButtons {
-  cursor: pointer;
-  display: flex;
-  flex-direction: row;
-  gap: 48px;
-  align-items: center;
 }
 
 .navButton {
@@ -446,12 +496,6 @@
   flex-direction: row;
   gap: 39px;
   align-items: center;
-}
-
-.rightContent {
-  display: flex;
-  flex-direction: row;
-  gap: 145px;
 }
 
 .textCenter {
@@ -490,7 +534,7 @@
   flex-direction: row;
   gap: 8px;
   justify-content: center;
-  max-width: 1440px;
+  max-width: 1080px;
   align-self: center;
 }
 
@@ -540,6 +584,12 @@
   overflow: scroll;
   margin: 0 -80px;
   padding: 0 80px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.pointsTableContainer::-webkit-scrollbar {
+  display: none;
 }
 
 .technologies {
@@ -636,13 +686,6 @@
 
   background: rgba(63, 140, 214, 0.08);
   border-radius: 44px;
-}
-
-.footer {
-  border-top: 1px solid rgba(145, 145, 145, 0.6);
-  padding: 60px;
-  display: flex;
-  justify-content: space-between;
 }
 
 .colorNeutral {

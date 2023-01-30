@@ -14,10 +14,17 @@ import { CompaniesSlider } from '../components/CompaniesSlider';
 import { FAQ } from './blocks/FAQ';
 import { Cases } from './blocks/Cases';
 import { Header } from './blocks/Header';
+import { useState } from 'react';
+import { slide as Menu } from 'react-burger-menu';
 
 export default function Home() {
+  const [isOpened, setIsOpened] = useState(false);
+
   return (
     <>
+      <Menu customBurgerIcon={<></>} isOpen={isOpened}>
+        <NavButtons className={styles.header} />
+      </Menu>
       <Head>
         <title>NMBITS</title>
         <meta name="description" content="" />
@@ -25,7 +32,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.mainContainer}>
-        <Header />
+        <Header isOpened={isOpened} setIsOpened={setIsOpened} />
         <div className={styles.padding}>
           <div id="products" className={styles.products}>
               <div className={styles.productsTitles}>
