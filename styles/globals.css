@@ -349,3 +349,7 @@ input[type=checkbox] {
   border: 1.5px solid #929292;
   border-radius: 6px;
 }
+
+#react-burger-menu-btn {
+  display: none;
+}
