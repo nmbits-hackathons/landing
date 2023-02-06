@@ -97,7 +97,7 @@ export function Header({ isOpened, setIsOpened }: any) {
                 <div className={styles.commandArrow}>
                     <CommandArrowSvg />
                 </div>
-                <CommandSvg />
+                <CommandSvg className={styles.commandSvg} />
             </div>
             <div className={styles.truckContainer}>
                 <div className={styles.truckArrow}>

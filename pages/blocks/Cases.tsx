@@ -12,12 +12,14 @@ import { handleClickScroll } from '../../utils';
 export function Cases() {
     return (
         <div id="cases" className={styles.cases}>
-            <span className={styles.faqTitle}>
-                <Text className={styles.colorWhite} variant="bodySemiboldS">
-                    Кейсы
-                </Text>
-            </span>
             <div className={styles.casesContent}>
+                <div className={styles.casesContainer}>
+                    <span className={styles.faqTitle}>
+                        <Text className={styles.colorWhite} variant="bodySemiboldS">
+                            Кейсы
+                        </Text>
+                    </span>
+                </div>
                 <div className={styles.casesCard}>
                     <Text className={styles.colorMedium} variant="bodySemiboldXL">
                         <span className={styles.colorDark}>МИАП:</span> сервис мониторинга инновационной активности

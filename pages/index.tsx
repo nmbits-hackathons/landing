@@ -35,11 +35,11 @@ export default function Home() {
         <Header isOpened={isOpened} setIsOpened={setIsOpened} />
         <div className={styles.padding}>
           <div id="products" className={styles.products}>
-              <div className={styles.productsTitles}>
-                <Title className={styles.colorDark} variant="subtitle1">Создаем</Title>
-                <Title className={styles.colorMedium} variant="subtitle2">цифровые продукты</Title>
-              </div>
               <div className={styles.productsCards}>
+                <div className={styles.productsTitles}>
+                  <Title className={styles.colorDark} variant="subtitle1">Создаем</Title>
+                  <Title className={styles.colorMedium} variant="subtitle2">цифровые продукты</Title>
+                </div>
                 <div style={{ backgroundImage: `url(${cardOne.src})` }} className={`${styles.productsCard} ${styles.adaptiveDN}`}>
                 </div>
                 <div className={styles.productsCard}>
@@ -103,9 +103,11 @@ export default function Home() {
             <CompaniesSlider />
             <Cases />
               <div id="processes" className={styles.processes}>
-                <div className={styles.processesTitle}>
-                  <Title className={styles.mb32} variant="subtitle3">Прозрачные процессы</Title>
-                  <Text className={styles.processesDescription} variant="bodyM">Работаем по договору, обговорив сроки и стоимость необходимых работ. Декомпозируем на подзадачи и проектируем решения от бизнес-логики до интерфейса. Проводим полный цикл разработки и гарантируем поддержку продутка после его сдачи.</Text>
+                <div className={styles.processesTitleWrap}>
+                  <div className={styles.processesTitle}>
+                    <Title className={styles.mb32} variant="subtitle3">Прозрачные процессы</Title>
+                    <Text className={styles.processesDescription} variant="bodyM">Работаем по договору, обговорив сроки и стоимость необходимых работ. Декомпозируем на подзадачи и проектируем решения от бизнес-логики до интерфейса. Проводим полный цикл разработки и гарантируем поддержку продутка после его сдачи.</Text>
+                  </div>
                 </div>
                 <div className={styles.pointsTableContainer}>
                   <PointsSvg />

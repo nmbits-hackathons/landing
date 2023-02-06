@@ -248,9 +248,12 @@
   right: 300px;
   bottom: -70px;
   z-index: 2;
+  width: 70%;
+}
+
+.commandSvg {
   background: rgba(255, 255, 255, 0.22);
   backdrop-filter: blur(8px);
-  width: 70%;
 }
 
 .truckContainer {
@@ -526,6 +529,11 @@
 
 .productsTitles {
   margin-bottom: 72px;
+  flex: 0 0 90%;
+}
+
+.casesContainer {
+  flex: 0 0 90%;
 }
 
 .productsCards {
@@ -565,6 +573,9 @@
 
 .processes {
   margin-top: 200px;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
 }
 
 .mb32 {
@@ -578,6 +589,16 @@
 .processesTitle {
   max-width: 640px;
   margin-bottom: 34px;
+}
+
+.processesTitleWrap {
+  width: 100%;
+}
+
+@media (min-width: 1400px) {
+  .processesTitleWrap {
+    width: 1282px;
+  }
 }
 
 .pointsTableContainer {
