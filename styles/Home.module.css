@@ -312,9 +312,8 @@
   justify-content: space-between;
 }
 
-/* Mobile */
-@media (max-width: 700px) {
-  .footer {
+@media (max-width: 1120px) {
+    .footer {
     flex-direction: column;
     gap: 16px;
     padding: 20px;
@@ -339,12 +338,13 @@
     flex: 1;
     background-color: white;
   }
-
   .rightContent {
     gap: 8px;
   }
+}
 
-
+/* Mobile */
+@media (max-width: 700px) {
   .casesCard, .leadForm, .huobiBots {
     flex: 1;
   }

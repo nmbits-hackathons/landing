@@ -17,7 +17,7 @@ import PhoneSvg from '../../static/phone.svg';
 
 export function Header({ isOpened, setIsOpened }: any) {
     const { width } = useWindowDimensions();
-    const isMobile = width <= 768;
+    const isMobile = width <= 1120;
 
     function renderNavbar() {
 
